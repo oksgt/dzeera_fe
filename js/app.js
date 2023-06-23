@@ -32,7 +32,7 @@ window.addEventListener('scroll', () => {
 
 var splide = new Splide('#slide_new_arrivals', {
     type: 'loop',
-    perPage: 4,
+    perPage: 3,
     rewind: true,
 });
 
