@@ -4,6 +4,10 @@ const header3 = document.querySelector('#nav3');
 const myList = document.querySelector('.mobile-navbar-nav');
 const items = myList.children;
 
+function modal_test(){
+    $('#exampleModalCenter').modal('show');
+}
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
         header.classList.add('is-scrolled');
