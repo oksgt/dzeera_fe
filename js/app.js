@@ -23,17 +23,18 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// $(document).ready(function(){
-// 	$(".wish-icon i").click(function(){
-// 		$(this).toggleClass("fa-heart fa-heart-o");
-// 	});
-// });	
-
 var isMobile = window.innerWidth <= 768;
 var slide_new_arrivals_item = 6;
+var slide_category_1 = 6;
+var slide_category_2 = 6;
+var slide_category_3 = 6;
+
 var slide_category_item = 10;
 if (isMobile) {
     slide_new_arrivals_item = 3;
+    slide_category_1 = 3;
+    slide_category_2 = 3;
+    slide_category_3 = 3;
     slide_category_item = 6;
 }
 
@@ -48,6 +49,30 @@ splide.mount();
 
 var splide = new Splide('#slide_category', {
     perPage: slide_category_item,
+    rewind: true,
+});
+
+splide.mount();
+
+var splide = new Splide('#slide_category_1', {
+    type: 'loop',
+    perPage: slide_category_1,
+    rewind: true,
+});
+
+splide.mount();
+
+var splide = new Splide('#slide_category_2', {
+    type: 'loop',
+    perPage: slide_category_2,
+    rewind: true,
+});
+
+splide.mount();
+
+var splide = new Splide('#slide_category_3', {
+    type: 'loop',
+    perPage: slide_category_3,
     rewind: true,
 });
 
