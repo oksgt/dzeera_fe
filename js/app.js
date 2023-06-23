@@ -2,7 +2,6 @@ const header = document.querySelector('#nav1');
 const header2 = document.querySelector('#nav2');
 const header3 = document.querySelector('#nav3');
 const myList = document.querySelector('.mobile-navbar-nav');
-
 const items = myList.children;
 
 window.addEventListener('scroll', () => {
@@ -30,25 +29,26 @@ window.addEventListener('scroll', () => {
 // 	});
 // });	
 
+var isMobile = window.innerWidth <= 768;
+var slide_new_arrivals_item = 6;
+var slide_category_item = 10;
+if (isMobile) {
+    slide_new_arrivals_item = 3;
+    slide_category_item = 6;
+}
+
+
 var splide = new Splide('#slide_new_arrivals', {
     type: 'loop',
-    perPage: 3,
+    perPage: slide_new_arrivals_item,
     rewind: true,
 });
 
 splide.mount();
 
 var splide = new Splide('#slide_category', {
-    // type: 'loop',
-    perPage: 8,
+    perPage: slide_category_item,
     rewind: true,
 });
 
 splide.mount();
-
-// var splide2 = new Splide('.splide', {
-//     type: 'loop',
-//     perPage: 8,
-// });
-
-// splide2.mount();
